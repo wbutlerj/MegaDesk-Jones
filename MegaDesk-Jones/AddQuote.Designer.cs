@@ -39,8 +39,8 @@ namespace MegaDesk_Jones
             this.lblWidth = new System.Windows.Forms.Label();
             this.lblDepth = new System.Windows.Forms.Label();
             this.lblNumDrawers = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbxSurfMaterial = new System.Windows.Forms.ComboBox();
+            this.cmbxDelivery = new System.Windows.Forms.ComboBox();
             this.lblSurfMaterial = new System.Windows.Forms.Label();
             this.lblDelivery = new System.Windows.Forms.Label();
             this.btnGetQuote = new System.Windows.Forms.Button();
@@ -84,30 +84,65 @@ namespace MegaDesk_Jones
             this.grpbxSize.Controls.Add(this.nudDepth);
             this.grpbxSize.Controls.Add(this.nudWidth);
             this.grpbxSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbxSize.Location = new System.Drawing.Point(129, 142);
+            this.grpbxSize.Location = new System.Drawing.Point(120, 142);
             this.grpbxSize.Name = "grpbxSize";
-            this.grpbxSize.Size = new System.Drawing.Size(215, 157);
+            this.grpbxSize.Size = new System.Drawing.Size(224, 157);
             this.grpbxSize.TabIndex = 3;
             this.grpbxSize.TabStop = false;
             this.grpbxSize.Text = "Desk Size";
             // 
             // nudWidth
             // 
-            this.nudWidth.Location = new System.Drawing.Point(72, 34);
+            this.nudWidth.Location = new System.Drawing.Point(85, 34);
+            this.nudWidth.Maximum = new decimal(new int[] {
+            96,
+            0,
+            0,
+            0});
+            this.nudWidth.Minimum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             this.nudWidth.Name = "nudWidth";
             this.nudWidth.Size = new System.Drawing.Size(120, 26);
             this.nudWidth.TabIndex = 0;
+            this.nudWidth.Value = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             // 
             // nudDepth
             // 
-            this.nudDepth.Location = new System.Drawing.Point(72, 93);
+            this.nudDepth.Location = new System.Drawing.Point(85, 91);
+            this.nudDepth.Maximum = new decimal(new int[] {
+            48,
+            0,
+            0,
+            0});
+            this.nudDepth.Minimum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             this.nudDepth.Name = "nudDepth";
             this.nudDepth.Size = new System.Drawing.Size(120, 26);
             this.nudDepth.TabIndex = 1;
+            this.nudDepth.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             // 
             // nudNumDrawers
             // 
             this.nudNumDrawers.Location = new System.Drawing.Point(551, 142);
+            this.nudNumDrawers.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.nudNumDrawers.Name = "nudNumDrawers";
             this.nudNumDrawers.Size = new System.Drawing.Size(68, 29);
             this.nudNumDrawers.TabIndex = 4;
@@ -139,32 +174,32 @@ namespace MegaDesk_Jones
             this.lblNumDrawers.TabIndex = 5;
             this.lblNumDrawers.Text = "Number Of Drawers:";
             // 
-            // comboBox1
+            // cmbxSurfMaterial
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbxSurfMaterial.FormattingEnabled = true;
+            this.cmbxSurfMaterial.Items.AddRange(new object[] {
             "Oak",
             "Laminate",
             "Pine",
             "Rosewood",
             "Veneer"});
-            this.comboBox1.Location = new System.Drawing.Point(551, 210);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
-            this.comboBox1.TabIndex = 6;
+            this.cmbxSurfMaterial.Location = new System.Drawing.Point(551, 210);
+            this.cmbxSurfMaterial.Name = "cmbxSurfMaterial";
+            this.cmbxSurfMaterial.Size = new System.Drawing.Size(121, 32);
+            this.cmbxSurfMaterial.TabIndex = 6;
             // 
-            // comboBox2
+            // cmbxDelivery
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbxDelivery.FormattingEnabled = true;
+            this.cmbxDelivery.Items.AddRange(new object[] {
             "None",
             "3 Day",
             "5 Day",
             "7 Day"});
-            this.comboBox2.Location = new System.Drawing.Point(551, 265);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 32);
-            this.comboBox2.TabIndex = 7;
+            this.cmbxDelivery.Location = new System.Drawing.Point(551, 265);
+            this.cmbxDelivery.Name = "cmbxDelivery";
+            this.cmbxDelivery.Size = new System.Drawing.Size(121, 32);
+            this.cmbxDelivery.TabIndex = 7;
             // 
             // lblSurfMaterial
             // 
@@ -192,6 +227,7 @@ namespace MegaDesk_Jones
             this.btnGetQuote.TabIndex = 10;
             this.btnGetQuote.Text = "Get Quote";
             this.btnGetQuote.UseVisualStyleBackColor = true;
+            this.btnGetQuote.Click += new System.EventHandler(this.btnGetQuote_Click);
             // 
             // btnCancel
             // 
@@ -201,6 +237,7 @@ namespace MegaDesk_Jones
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // AddQuote
             // 
@@ -211,8 +248,8 @@ namespace MegaDesk_Jones
             this.Controls.Add(this.btnGetQuote);
             this.Controls.Add(this.lblDelivery);
             this.Controls.Add(this.lblSurfMaterial);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbxDelivery);
+            this.Controls.Add(this.cmbxSurfMaterial);
             this.Controls.Add(this.lblNumDrawers);
             this.Controls.Add(this.nudNumDrawers);
             this.Controls.Add(this.grpbxSize);
@@ -221,6 +258,7 @@ namespace MegaDesk_Jones
             this.Controls.Add(this.txtbxCustomerName);
             this.Name = "AddQuote";
             this.Text = "Add New Quote";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddQuote_FormClosed);
             this.grpbxSize.ResumeLayout(false);
             this.grpbxSize.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWidth)).EndInit();
@@ -243,8 +281,8 @@ namespace MegaDesk_Jones
         private System.Windows.Forms.NumericUpDown nudWidth;
         private System.Windows.Forms.NumericUpDown nudNumDrawers;
         private System.Windows.Forms.Label lblNumDrawers;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbxSurfMaterial;
+        private System.Windows.Forms.ComboBox cmbxDelivery;
         private System.Windows.Forms.Label lblSurfMaterial;
         private System.Windows.Forms.Label lblDelivery;
         private System.Windows.Forms.Button btnGetQuote;

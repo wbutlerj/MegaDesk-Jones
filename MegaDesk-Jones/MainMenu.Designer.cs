@@ -45,6 +45,7 @@ namespace MegaDesk_Jones
             this.btnAddQuote.TabIndex = 0;
             this.btnAddQuote.Text = "Add New Quote";
             this.btnAddQuote.UseVisualStyleBackColor = true;
+            this.btnAddQuote.Click += new System.EventHandler(this.btnAddQuote_Click);
             // 
             // btnViewQuotes
             // 
@@ -54,6 +55,7 @@ namespace MegaDesk_Jones
             this.btnViewQuotes.TabIndex = 1;
             this.btnViewQuotes.Text = "View Quotes";
             this.btnViewQuotes.UseVisualStyleBackColor = true;
+            this.btnViewQuotes.Click += new System.EventHandler(this.btnViewQuotes_Click);
             // 
             // btnSearchQuotes
             // 
@@ -63,6 +65,7 @@ namespace MegaDesk_Jones
             this.btnSearchQuotes.TabIndex = 2;
             this.btnSearchQuotes.Text = "Search Quotes";
             this.btnSearchQuotes.UseVisualStyleBackColor = true;
+            this.btnSearchQuotes.Click += new System.EventHandler(this.btnSearchQuotes_Click);
             // 
             // btnExit
             // 
@@ -72,6 +75,7 @@ namespace MegaDesk_Jones
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // pictureBox1
             // 
@@ -93,7 +97,7 @@ namespace MegaDesk_Jones
             this.Controls.Add(this.btnViewQuotes);
             this.Controls.Add(this.btnAddQuote);
             this.Name = "MainMenu";
-            this.Text = "Main Menu";
+            this.Text = "MegaDesk";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
