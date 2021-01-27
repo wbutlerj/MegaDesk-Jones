@@ -80,9 +80,9 @@ namespace MegaDesk_Jones
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MegaDesk_Jones.Properties.Resources.teacher_desk;
-            this.pictureBox1.Location = new System.Drawing.Point(485, 129);
+            this.pictureBox1.Location = new System.Drawing.Point(440, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 258);
+            this.pictureBox1.Size = new System.Drawing.Size(558, 456);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -90,7 +90,7 @@ namespace MegaDesk_Jones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 544);
+            this.ClientSize = new System.Drawing.Size(1123, 650);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSearchQuotes);
